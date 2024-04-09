@@ -49,7 +49,7 @@ get("/dice/1/20") do
 
   @outcome = "You rolled a #{@die}."
 
-  erb(:one_twenty)
+  erb(:one_twenty, {:layout => :wrapper })
 end
 
 get("/dice/5/4") do
