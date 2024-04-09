@@ -57,9 +57,10 @@ get("/dice/5/4") do
   second_die = rand(1..4)
   third_die = rand(1..4)
   fourth_die = rand(1..4)
-  sum = first_die + second_die + third_die + fourth_die
+  fifth_die = rand(1..4)
+  sum = first_die + second_die + third_die + fourth_die + fifth_die
 
-  outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, and a #{fourth_die} for a total of #{sum}"
+  outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, a #{fourth_die}, and a #{fifth_die} for a total of #{sum}"
 end
 
 get("/") do
