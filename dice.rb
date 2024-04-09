@@ -1,6 +1,7 @@
-require "sinatra"
 require "better_errors"
 require "binding_of_caller"
+require "sinatra"
+
 # Need this configuration for better_errors
 use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
