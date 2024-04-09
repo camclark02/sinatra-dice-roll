@@ -1,11 +1,13 @@
+require "sinatra"
 require "better_errors"
 require "binding_of_caller"
-require "sinatra"
 
-# Need this configuration for better_errors
-use(BetterErrors::Middleware)
-BetterErrors.application_root = __dir__
-BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
+configure :development do
+  use(BetterErrors::Middleware)
+  BetterErrors.application_root = __dir__
+  BetterErrors::Middleware.allow_ip!('0.0.0.0/0') # Allow all IP addresses in dev mode
+end
+
 get("/") do
   "Hello World"
 end
