@@ -65,6 +65,18 @@ get("/dice/5/4") do
   erb(:five_four, { :layout => :wrapper })
 end
 
+get("/dice/100/6") do
+  @rolls = []
+
+  100.times do
+    die = rand(1..6)
+
+    @rolls.push(die)
+  end
+
+  erb(:one_hundred_six)
+end
+
 get("/") do
   erb(:elephant)
 end
