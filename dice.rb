@@ -48,10 +48,9 @@ end
 get("/dice/1/20") do
   first_die = rand(1..20)
 
-  outcome = "You rolled a #{first_die}"
+  @outcome = "You rolled a #{first_die}"
 
-  "<h1>1d20</h1>
-  <p>#{outcome}</p>"
+  erb(:one_twenty)
 end
 
 get("/dice/5/4") do
