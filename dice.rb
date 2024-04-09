@@ -1,4 +1,6 @@
 require "sinatra"
+require "better_errors"
+require "binding_of_caller"
 get("/") do
   "Hello World"
 end
@@ -23,4 +25,3 @@ get("/dice/2/6") do
   "<h1>2d6</h1>
    <p>#{outcome}</p>"
 end
-
