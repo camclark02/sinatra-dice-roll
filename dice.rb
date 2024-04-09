@@ -72,3 +72,7 @@ get("/dice/5/4") do
 
   outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, and a #{fourth_die} for a total of #{sum}"
 end
+
+get("/") do
+  erb(:elephant)
+end
