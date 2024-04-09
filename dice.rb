@@ -45,11 +45,11 @@ get("/dice/2/10") do
 end
 
 get("/dice/1/20") do
-  first_die = rand(1..20)
+  @die = rand(1..20)
 
-  @outcome = "You rolled a #{first_die}"
+  @outcome = "You rolled a #{@die}."
 
-  erb(:one_twenty, {:layout => :wrapper } )
+  erb(:one_twenty)
 end
 
 get("/dice/5/4") do
@@ -62,7 +62,7 @@ get("/dice/5/4") do
 
   @outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, a #{fourth_die}, and a #{fifth_die} for a total of #{sum}"
 
-  erb(:five_four, { layout => :wrapper })
+  erb(:five_four, { :layout => :wrapper })
 end
 
 get("/") do
