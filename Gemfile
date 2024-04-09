@@ -13,4 +13,5 @@ gem "puma"
 gem install rackup
 gem "sinatra-contrib"
 
+gem "rackup"
 
